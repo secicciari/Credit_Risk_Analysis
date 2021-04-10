@@ -2,7 +2,7 @@
 
 ## Project Overview
 ### Purpose
-I've been asked to utilize Tableau to create visualizations that we can present to investors in order to show them that a bike-sharing program in Des Moines is a solid business proposal. I completed the analysis using August Citi Bike data from New York City in order to get a better understanding of what a bike-sharing program in Des Moines might look like.
+I've been asked to use a credit card credit dataset from LendingClub to test the performance of different models to recommend whether any of them should be used to predict credit risk. I will oversample the data using the RandomOverSampler and SMOTE algorithms, and undersample the data using the ClusterCentroids algorithm. Then, I’ll use a combinatorial approach of over- and undersampling using the SMOTEENN algorithm. Finally, I'l compare two new machine learning models that reduce bias, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk.
 
 ## Results
 ### RandomOversampler
@@ -42,4 +42,4 @@ I've been asked to utilize Tableau to create visualizations that we can present 
 - Recall: 0.92 when predicting high_risk, 0.94 when predicting low_risk
 
 ## Summary
-
+In cases of unbalanced classification like we have here, the balanced accuracy metric is really important in evaluating a model's performance. I would recommend using the EasyEnsembleClassifier model to predict credit risk. Of the six models I tested, this model had the best precision and recall across both classes (low risk and high risk). Although the precision for high risk is still very low, the recall score shows that 92% of actual high risk cases are detected correctly, which is important in flagging accounts.
